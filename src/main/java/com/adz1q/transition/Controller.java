@@ -68,6 +68,10 @@ public class Controller implements Initializable {
     }
 
     private void transition() {
+        if (txtMultiplier.getText().isBlank()) return;
+        if (txtFinalX.getText().isBlank()) return;
+        if (txtFinalY.getText().isBlank()) return;
+
         rotate();
         scale();
         translate();
