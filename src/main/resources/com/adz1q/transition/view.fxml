@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.adz1q.transition.Controller">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.adz1q.transition.Controller">
+   <children>
+      <Label layoutX="26.0" layoutY="30.0" text="Ustawienia Startowe">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="72.0" text="Rozmiar początkowy">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Slider fx:id="startWidth" layoutX="24.0" layoutY="104.0" max="2.0" value="1.0" />
+      <Slider fx:id="startHeight" layoutX="24.0" layoutY="137.0" max="2.0" value="1.0" />
+      <Label layoutX="177.0" layoutY="103.0" text="Szerokość" />
+      <Label layoutX="177.0" layoutY="360.0" text="Wysokość" />
+      <Label layoutX="26.0" layoutY="182.0" text="Ustawienia Końcowe">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="finalColor" layoutX="24.0" layoutY="234.0" />
+      <Label layoutX="177.0" layoutY="238.0" text="Kolor" />
+      <Label layoutX="26.0" layoutY="279.0" text="Rozmiar końcowy">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Slider fx:id="finalWidth" layoutX="24.0" layoutY="324.0" max="2.0" />
+      <Slider fx:id="finalHeight" layoutX="24.0" layoutY="361.0" max="2.0" />
+      <Label layoutX="178.0" layoutY="323.0" text="Szerokość" />
+      <Label layoutX="177.0" layoutY="136.0" text="Wysokość" />
+      <Label layoutX="26.0" layoutY="399.0" text="Obrót">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Slider fx:id="finalRotate" layoutX="26.0" layoutY="439.0" max="360.0" min="1.0" value="1.0" />
+      <TextField fx:id="txtMultiplier" layoutX="178.0" layoutY="434.0" prefHeight="25.0" prefWidth="62.0" promptText="Mnożnik" />
+      <Label layoutX="26.0" layoutY="474.0" text="Pozycja końcowa">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFinalX" layoutX="26.0" layoutY="508.0" promptText="Podaj X" />
+      <TextField fx:id="txtFinalY" layoutX="26.0" layoutY="551.0" promptText="Podaj Y" />
+      <Button fx:id="btnTransform" layoutX="24.0" layoutY="619.0" mnemonicParsing="false" text="Wykonaj transformację">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Pane layoutX="313.0" layoutY="25.0" prefHeight="700.0" prefWidth="650.0" style="-fx-background-color: lightgray;">
+         <children>
+            <Rectangle fx:id="square" arcHeight="10.0" arcWidth="10.0" height="200.0" layoutX="225.0" layoutY="250.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+         </children>
+      </Pane>
+   </children>
+</Pane>
